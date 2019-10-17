@@ -1,0 +1,5 @@
+<launch>
+  <group ns="$(arg veh)">
+    <node pkg="my_package" type="braitenberg.py" name="braitenberg" output="screen"/>
+  </group>
+</launch>
