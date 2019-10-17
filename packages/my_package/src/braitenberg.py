@@ -313,12 +313,14 @@ class BraitenbergNode(DTROS):
 
         stop = WheelsCmdStamped()
         stop.vel_left, stop.vel_right = self.speedToCmd(0.0, 0.0)
+        rospy.sleep(1)
         self.pub.publish(stop)
-        self.pub.publish(stop)
-        self.pub.publish(stop)
-        self.pub.publish(stop)
-        self.pub.publish(stop)
-        self.pub.publish(stop)
+        # rospy.sleep(0.5)
+        # self.pub.publish(stop)
+        # self.pub.publish(stop)
+        # self.pub.publish(stop)
+        # self.pub.publish(stop)
+        # self.pub.publish(stop)
 
         super(BraitenbergNode, self).onShutdown()
 
